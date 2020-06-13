@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:orientation="vertical"
+          android:layout_margin="5dip"
+          >
+          <com.qiyuzhibo.phonelive.widget.LoadUrlImageView
+              android:scaleType="centerCrop"
+              android:id="@+id/iv_live_user_pic"
+              android:background="@color/white"
+              android:src="@drawable/create_room_bg"
+              android:layout_width="match_parent"
+              app:type="round"
+              app:borderRadius="5dip"
+              android:layout_height="match_parent" />
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:padding="10dip"
+              android:orientation="vertical">
+
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:orientation="horizontal">
+
+                  <ImageView
+                      android:src="@drawable/live_map_dark"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content" />
+
+                  <com.qiyuzhibo.phonelive.widget.BlackTextView
+                      android:id="@+id/tv_live_local"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="火星"
+                      android:textColor="@color/white"
+                      android:gravity="center"
+                      android:textSize="12sp"
+                      android:layout_marginLeft="5dip"
+                      />
+
+              </LinearLayout>
+              <com.qiyuzhibo.phonelive.widget.BlackTextView
+                  android:id="@+id/tv_hot_room_title"
+                  android:textSize="@dimen/text_size_10"
+                  android:textColor="@color/black"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" />
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:gravity="bottom"
+                  android:orientation="vertical"
+                  >
+
+                  <ImageView
+
+                      android:id="@+id/iv_live_hot_type"
+                      android:layout_width="50dip"
+                      android:layout_height="15dip"
+                      />
+                  <RelativeLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="10dip"
+                      >
+                      <com.qiyuzhibo.phonelive.widget.AvatarView
+                          android:id="@+id/iv_live_user_head"
+                          android:layout_width="30dp"
+                          android:layout_height="30dp" />
+
+                      <ImageView
+                          android:id="@+id/iv_live_user_anchorlevel"
+                          style="@style/live_level_style"
+                          android:layout_gravity="center"
+                          android:visibility="gone"
+                          android:layout_marginLeft="@dimen/space_25"
+                          android:layout_marginTop="@dimen/space_25">
+
+
+                      </ImageView>
+                      <com.qiyuzhibo.phonelive.widget.BlackTextView
+                          android:layout_toRightOf="@id/iv_live_user_head"
+                          android:layout_centerVertical="true"
+                          android:singleLine="true"
+                          android:ellipsize="end"
+                          android:maxEms="8"
+                          android:layout_marginLeft="5dip"
+                          android:id="@+id/tv_live_nick"
+                          android:text="主播nick"
+                          android:textColor="@color/white"
+                          android:textSize="@dimen/text_size_12"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content" />
+
+                      <LinearLayout
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:gravity="center"
+                          android:layout_alignParentRight="true"
+                          android:layout_centerVertical="true"
+                          android:orientation="horizontal">
+
+                          <ImageView
+                              android:src="@drawable/renshu"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content" />
+
+                          <com.qiyuzhibo.phonelive.widget.BlackTextView
+                              android:textSize="@dimen/text_size_14"
+                              android:layout_marginLeft="5dip"
+                              android:id="@+id/tv_live_usernum"
+                              android:layout_width="wrap_content"
+                              android:text="0"
+                              android:layout_height="wrap_content"
+                              android:textColor="@color/white"/>
+
+                      </LinearLayout>
+
+                  </RelativeLayout>
+
+
+
+              </LinearLayout>
+
+          </LinearLayout>
+
+
+
+          <LinearLayout
+              android:background="@color/white"
+              android:weightSum="7"
+              android:visibility="gone"
+              android:paddingLeft="10dp"
+              android:layout_width="match_parent"
+              android:layout_height="60dp"
+              android:orientation="horizontal"
+              >
+              <LinearLayout
+                  android:layout_weight="4"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent">
+                  <RelativeLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center">
+
+
+                  </RelativeLayout>
+                  <LinearLayout
+                      android:layout_gravity="center"
+                      android:layout_marginLeft="10dp"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+
+                      <LinearLayout
+                          android:layout_marginTop="3dp"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:gravity="center_vertical">
+
+                          <com.qiyuzhibo.phonelive.widget.BlackTextView
+                              android:textColor="@color/light_gray2"
+                              android:layout_marginLeft="5dp"
+                              android:visibility="gone"
+                              android:textSize="@dimen/text_size_12"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content" />
+                       </LinearLayout>
+                  </LinearLayout>
+              </LinearLayout>
+              <View
+                  android:layout_weight="1"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"/>
+              <LinearLayout
+                  android:paddingLeft="10dp"
+                  android:layout_weight="2"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:gravity="center">
+
+                  <com.qiyuzhibo.phonelive.widget.BlackTextView
+                      android:layout_marginTop="3dp"
+                      android:textColor="@color/light_gray2"
+                      android:textSize="@dimen/text_size_12"
+                      android:text="@string/lookin"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"/>
+              </LinearLayout>
+          </LinearLayout>
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+              <ImageView
+                  android:visibility="gone"
+                  android:paddingBottom="5dp"
+                  android:paddingTop="5dp"
+                  android:paddingLeft="6dp"
+                  android:paddingRight="6dp"
+                  android:layout_marginTop="17dp"
+                  android:layout_marginRight="20dp"
+                  android:layout_alignParentRight="true"
+                  android:layout_width="wrap_content"
+                  android:background="@drawable/ic_live2"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"/>
+              <ImageView
+                  android:layout_margin="@dimen/space_10"
+                  android:src="@drawable/type0"
+                  android:visibility="gone"
+                  android:layout_width="60dp"
+                  android:layout_height="60dp"
+                  android:orientation="horizontal"
+                  />
+          </RelativeLayout>
+
+      </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

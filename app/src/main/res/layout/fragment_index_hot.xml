@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.qiyuzhibo.phonelive.widget.SlideshowView
+        android:id="@+id/slideshowView"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <com.qiyuzhibo.phonelive.widget.WPSwipeRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dip"
+            android:layout_height="match_parent"
+            >
+
+            <GridView
+                android:layout_below="@+id/xinren"
+                android:scrollbars="none"
+                android:id="@+id/lv_live_room"
+                android:layout_width="match_parent"
+                android:numColumns="2"
+                android:layout_height="match_parent"
+                android:divider="@null"/>
+
+        </com.qiyuzhibo.phonelive.widget.WPSwipeRefreshLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/tuijian"
+                android:layout_marginTop="120dip"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="30dip"
+                android:orientation="horizontal"
+                android:gravity="center|left"
+                android:padding="5dip"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/yanzhituijian"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:text="颜值推荐"/>
+
+
+            </LinearLayout>
+
+
+
+            <GridView
+                android:layout_below="@+id/tuijian"
+                android:scrollbars="none"
+                android:visibility="gone"
+                android:id="@+id/lv_live_tuijian"
+                android:layout_width="match_parent"
+                android:numColumns="2"
+                android:layout_height="wrap_content"
+                android:divider="@null"/>
+
+            <LinearLayout
+                android:id="@+id/xinren"
+                android:layout_width="match_parent"
+                android:layout_height="30dip"
+                android:orientation="horizontal"
+                android:gravity="center|left"
+                android:padding="5dip"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/hot"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:text="热门主播"/>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/fensi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/buzai" />
+
+                <com.qiyuzhibo.phonelive.widget.BlackTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:singleLine="true"
+                    android:text="现在还没有主播"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_20" />
+
+                <com.qiyuzhibo.phonelive.widget.BlackTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:singleLine="true"
+                    android:text="快快开启你的直播吧"
+                    android:textColor="@color/gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/load"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/shibai" />
+
+                <com.qiyuzhibo.phonelive.widget.BlackTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:singleLine="true"
+                    android:text="加载失败"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_20" />
+
+                <com.qiyuzhibo.phonelive.widget.BlackTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:singleLine="true"
+                    android:text="快快开启你的直播吧"
+                    android:textColor="@color/gray"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
